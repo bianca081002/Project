@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+
 const userSchema = new mongoose.Schema(
   {
     username: {
@@ -16,9 +17,14 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    
+    isAdmin:{
+      type:Boolean,
+      required:true,
+    }    
   },{ timestamps: true }
 );
+
+
 
 const User = mongoose.model('User', userSchema);
 
